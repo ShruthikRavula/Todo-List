@@ -67,18 +67,17 @@ This document outlines the implementation details, design decisions, and setup i
 *   **Data Export Specificity:** When exporting todos to CSV or JSON format, only the following specific fields are included: Tags, Time (e.g., due date or creation date), Priority, and Status.
 *   **Persistent Filters on Export:** The export functionality considers any active search queries and filters. Only the todos matching the current filtered view are exported.
 *   **Todo Display Order on Dashboard:** Upon user sign-in, todos are displayed in two sections:
-    1.  Todos created by the logged-in user appear first, sorted by their creation/due time in descending order.
+    1.  Todos created by the logged-in user appear first, sorted by their due time in descending order.
     2.  Todos where the logged-in user has been mentioned by others appear next, also sorted by date in descending order.
 *   **User Mention Mechanism:**
     *   To mention other users in a todo, their usernames are entered as a comma-separated list.
     *   The system processes these usernames: valid, existing usernames result in the respective users being tagged; invalid or non-existent usernames are ignored for the current implementation.
 
-## 4. Any Additional Features or Improvements You Made
+## 4. Any Additional Features or Improvements Made
 
 *   **User Authentication:**
     *   A full authentication system has been implemented, allowing users to sign up and sign in.
     *   Users can sign in using either their username or their email address.
-    *   _Note:_ Advanced authentication features like email verification (OTP) were not implemented as per the scope.
 *   **Batch Todo Completion:**
     *   Users can select multiple todos from their list and mark them as 'complete' in a single action, streamlining task management.
 *   **Potential Enhancement for User Mentions (Future Consideration):**
